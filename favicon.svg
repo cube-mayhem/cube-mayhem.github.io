@@ -1,17 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="CUBE MAYHEM game icon">
   <defs>
-    <linearGradient id="cyan" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5CF0FF"/>
-      <stop offset="1" stop-color="#00B8D4"/>
+    <radialGradient id="bg" cx="50%" cy="36%" r="78%">
+      <stop offset="0%" stop-color="#2b1a52"/>
+      <stop offset="46%" stop-color="#140d2e"/>
+      <stop offset="100%" stop-color="#060410"/>
+    </radialGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6c0"/>
+      <stop offset="26%" stop-color="#ffd24a"/>
+      <stop offset="56%" stop-color="#ff7a1f"/>
+      <stop offset="82%" stop-color="#ff3b2e"/>
+      <stop offset="100%" stop-color="#ff5028" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="46%" r="62%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="72%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
+    </radialGradient>
+    <linearGradient id="cubeFront" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1ad0bd"/>
+      <stop offset="100%" stop-color="#0a8278"/>
     </linearGradient>
+    <linearGradient id="cubeTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5ff5e4"/>
+      <stop offset="100%" stop-color="#1fcab8"/>
+    </linearGradient>
+    <linearGradient id="cubeRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c8379"/>
+      <stop offset="100%" stop-color="#053f3a"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#ff7d97"/>
+      <stop offset="55%" stop-color="#ff2e57"/>
+      <stop offset="100%" stop-color="#b0002f"/>
+    </radialGradient>
+    <filter id="glowEye" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowCyan" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <clipPath id="round"><rect x="0" y="0" width="1024" height="1024" rx="224" ry="224"/></clipPath>
+    <path id="rayLong" d="M-18,0 L18,0 L0,-384 Z"/>
+    <path id="rayShort" d="M-13,0 L13,0 L0,-250 Z"/>
   </defs>
-  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0A0A12"/>
-  <rect x="2.5" y="2.5" width="59" height="59" rx="13.5" fill="none" stroke="#15324A" stroke-width="1"/>
-  <path d="M32 7 L35.2 13.6 L42 14 L36.8 18.5 L38.4 25 L32 21.2 L25.6 25 L27.2 18.5 L22 14 L28.8 13.6 Z" fill="#FF2D9B"/>
-  <path d="M44 30 L52 26 L52 50 L44 54 Z" fill="#0089A3"/>
-  <path d="M20 30 L28 26 L52 26 L44 30 Z" fill="#00C2E0"/>
-  <rect x="20" y="30" width="24" height="24" rx="3" fill="url(#cyan)" stroke="#06222B" stroke-width="1.5"/>
-  <circle cx="28" cy="40" r="3" fill="#0A0A12"/>
-  <circle cx="36" cy="40" r="3" fill="#0A0A12"/>
-  <path d="M28 46 Q32 50 36 46" stroke="#0A0A12" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <g clip-path="url(#round)">
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#bg)"/>
+    <ellipse cx="300" cy="300" rx="280" ry="220" fill="#19e0ff" opacity="0.10" filter="url(#glowSoft)"/>
+    <ellipse cx="760" cy="720" rx="300" ry="240" fill="#ff2bd0" opacity="0.10" filter="url(#glowSoft)"/>
+    <g transform="translate(512,452)">
+      <g fill="#ff9a3a" opacity="0.85" filter="url(#glowSoft)">
+        <use href="#rayLong" transform="rotate(0)"/>
+        <use href="#rayLong" transform="rotate(30)"/>
+        <use href="#rayLong" transform="rotate(60)"/>
+        <use href="#rayLong" transform="rotate(90)"/>
+        <use href="#rayLong" transform="rotate(120)"/>
+        <use href="#rayLong" transform="rotate(150)"/>
+        <use href="#rayLong" transform="rotate(180)"/>
+        <use href="#rayLong" transform="rotate(210)"/>
+        <use href="#rayLong" transform="rotate(240)"/>
+        <use href="#rayLong" transform="rotate(270)"/>
+        <use href="#rayLong" transform="rotate(300)"/>
+        <use href="#rayLong" transform="rotate(330)"/>
+        <use href="#rayShort" transform="rotate(15)"/>
+        <use href="#rayShort" transform="rotate(45)"/>
+        <use href="#rayShort" transform="rotate(75)"/>
+        <use href="#rayShort" transform="rotate(105)"/>
+        <use href="#rayShort" transform="rotate(135)"/>
+        <use href="#rayShort" transform="rotate(165)"/>
+        <use href="#rayShort" transform="rotate(195)"/>
+        <use href="#rayShort" transform="rotate(225)"/>
+        <use href="#rayShort" transform="rotate(255)"/>
+        <use href="#rayShort" transform="rotate(285)"/>
+        <use href="#rayShort" transform="rotate(315)"/>
+        <use href="#rayShort" transform="rotate(345)"/>
+      </g>
+      <circle cx="0" cy="0" r="215" fill="url(#burst)"/>
+    </g>
+    <g opacity="0.85">
+      <rect x="232" y="300" width="40" height="40" rx="6" fill="url(#cubeFront)" transform="rotate(-12 252 320)"/>
+      <rect x="772" y="420" width="32" height="32" rx="5" fill="url(#cubeRight)" transform="rotate(20 788 436)"/>
+      <rect x="424" y="772" width="34" height="34" rx="5" fill="url(#cubeFront)" transform="rotate(8 441 789)"/>
+      <rect x="666" y="724" width="26" height="26" rx="4" fill="url(#cubeTop)" transform="rotate(-22 679 737)"/>
+    </g>
+    <g>
+      <polygon points="372,360 672,360 752,280 452,280" fill="url(#cubeTop)"/>
+      <polygon points="672,360 752,280 752,580 672,660" fill="url(#cubeRight)"/>
+      <polygon points="372,360 672,360 672,660 372,660" fill="url(#cubeFront)"/>
+      <line x1="505" y1="296" x2="512" y2="262" stroke="#0a8278" stroke-width="6"/>
+      <rect x="490" y="270" width="30" height="30" rx="4" fill="url(#cubeFront)"/>
+      <circle cx="512" cy="258" r="11" fill="#ff3bd6" filter="url(#glowCyan)"/>
+      <line x1="618" y1="312" x2="626" y2="282" stroke="#0a8278" stroke-width="5"/>
+      <rect x="606" y="288" width="26" height="26" rx="4" fill="url(#cubeFront)"/>
+      <circle cx="626" cy="278" r="9" fill="#38f5ff" filter="url(#glowCyan)"/>
+      <path d="M396,372 L452,430 L420,486 L500,520 L486,596" fill="none" stroke="#2ff6ff"
+            stroke-width="6" stroke-linejoin="round" stroke-linecap="round" filter="url(#glowCyan)" opacity="0.9"/>
+      <polygon points="404,604 640,604 640,648 404,648" fill="#06231f"/>
+      <path d="M410,634 L410,608 L432,634 L454,608 L476,634 L498,608 L520,634 L542,608 L564,634 L586,608 L608,634 L630,608 L634,634 Z"
+            fill="#d8fff8"/>
+      <g filter="url(#glowEye)">
+        <polygon points="418,450 492,462 486,494 420,486" fill="url(#eye)"/>
+        <polygon points="626,450 552,462 558,494 624,486" fill="url(#eye)"/>
+      </g>
+      <ellipse cx="452" cy="478" rx="9" ry="7" fill="#ffd9e2"/>
+      <ellipse cx="592" cy="478" rx="9" ry="7" fill="#ffd9e2"/>
+      <path d="M452,280 L372,360 M372,360 L372,660" fill="none" stroke="#38f5ff" stroke-width="5"
+            opacity="0.5" filter="url(#glowCyan)"/>
+      <path d="M672,360 L752,280 M752,280 L752,580 M752,580 L672,660" fill="none" stroke="#ff3bd6"
+            stroke-width="5" opacity="0.45" filter="url(#glowCyan)"/>
+    </g>
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#vignette)"/>
+    <rect x="6" y="6" width="1012" height="1012" rx="220" ry="220" fill="none"
+          stroke="#38f5ff" stroke-width="3" opacity="0.22"/>
+  </g>
 </svg>
