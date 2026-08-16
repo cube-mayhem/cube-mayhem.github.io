@@ -112,7 +112,7 @@ h1{font-weight:900;font-size:44px;line-height:52px;margin-top:12px;
       <div class="hint-row"><span class="hint-ico">📱</span><span><b>iPhone / iPad：</b>点底部 分享 图标 → 「添加到主屏幕」</span></div>
       <div class="hint-row"><span class="hint-ico">🤖</span><span><b>Android：</b>点 ⋮ 菜单 → 「安装应用」/「添加到主屏幕」</span></div>
     </div>
-    <p class="note" id="note">正在检测游戏服务…</p>
+    <p class="note" id="note">当前游戏服务：<b>在线</b> · 公网直连，地址永久有效</p>
   </div>
   <div class="modal-overlay" id="modal">
     <div class="modal">
@@ -125,21 +125,9 @@ h1{font-weight:900;font-size:44px;line-height:52px;margin-top:12px;
     </div>
   </div>
 <script>
-var GAME = { play:'/lobby.html', intro:'/index.html' };
-var GAME_URL = '';
-async function load(){
-  try{
-    var r = await fetch('game_url.json?t=' + Date.now());
-    var j = await r.json();
-    GAME_URL = (j && j.url) ? j.url : '';
-  }catch(e){ GAME_URL = ''; }
-  var note = document.getElementById('note');
-  note.innerHTML = GAME_URL
-    ? '当前游戏服务：<b>在线</b> · 公网直连，地址永久有效'
-    : '当前游戏服务：<b>暂未上线</b> · 请稍后再试';
-}
+// 游戏已部署到永久公网地址，直接写死，不再依赖 game_url.json（避免被隧道续期脚本覆盖）
+var GAME_URL = 'https://cube.daoshengyi.uno';
 function go(path){
-  if(!GAME_URL){ alert('游戏服务暂未上线，请稍后再试'); return; }
   var u = new URL(GAME_URL); u.pathname = path; location.href = u.toString();
 }
 
@@ -204,7 +192,5 @@ installBtn.addEventListener('click', function(){
   } else { showInstallModal(); }
 });
 window.addEventListener('appinstalled', function(){ if(installBtn && !isMobile) installBtn.style.display = 'none'; });
-
-load();
 </script>
 </body></html>
